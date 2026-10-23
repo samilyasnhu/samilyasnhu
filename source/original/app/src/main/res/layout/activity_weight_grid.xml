@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Weight"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:layout_marginBottom="4dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textGoalWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal Weight: Not set"
+            android:textSize="16sp"
+            android:textColor="#4B5563"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textAddWeightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Weight"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date, example 07/30/2026"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <EditText
+            android:id="@+id/editDailyWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Weight in lbs"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <EditText
+            android:id="@+id/editGoalWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Set or update goal weight"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="16dp"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <Button
+            android:id="@+id/buttonAddWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Weight"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/buttonSmsSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SMS Settings"
+                android:minHeight="48dp"
+                android:layout_marginEnd="6dp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Log Out"
+                android:minHeight="48dp"
+                android:layout_marginStart="6dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textGridHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight History"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <TableLayout
+            android:id="@+id/tableWeightGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2"
+            android:background="#FFFFFF" />
+
+    </LinearLayout>
+
+</ScrollView>

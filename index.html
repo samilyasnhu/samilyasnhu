@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samuel Ilyayev | CS 499 ePortfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap topbar">
+    <div>
+      <h1>Samuel Ilyayev</h1>
+      <p>CS 499 Computer Science Capstone ePortfolio</p>
+    </div>
+    <nav>
+      <a href="#self-assessment">Self-Assessment</a>
+      <a href="#artifact">Artifact</a>
+      <a href="#enhancements">Enhancements</a>
+      <a href="#outcomes">Outcomes</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap">
+      <h2>Overview</h2>
+      <p>This portfolio is built around one artifact, the CS 360 Weight Tracker Android application. I used the same project to show growth in software design and engineering, algorithms and data structures, and databases.</p>
+    </div>
+  </section>
+
+  <section id="self-assessment" class="section">
+    <div class="wrap narrow">
+      <h2>Professional Self-Assessment</h2>
+      <p>My approach to software development has changed because of the Computer Science program. In the beginning I was mainly concerned with producing working code and correct output. As I took more classes and worked on bigger projects I began to pay more attention to how the code was organized and if it would still be understandable later. I also started thinking more about how the data is stored, what can go wrong and what the next developer would need if they had to work on the same project. I went back to an older project for this ePortfolio and that difference was fairly clear to me. My main career goal is still software engineering, specifically full-stack or backend development, but I have a better sense of what that type of work really looks like.</p>
+      <p>Most of my coursework was completed on an individual basis so I didn’t have one large team project that I could use as an example of collaboration. But I still learned a lot about how to make my work easier for someone else to follow. Things like version control, clear names for variables and methods, documentation, and breaking a program into different responsibilities all matter when someone else needs to read or continue the code. Some of that was the instructors giving me feedback. I had to go back and change assignments instead of just assuming the first version was done. Before I made any changes to my Weight Tracker project, I had to explain it during code review for CS 499. I learned another type of experience in CS 465 as the Travlr Getaways project was an Express / MVC site, Handlebars, MongoDB with Mongoose, REST API, and an Angular admin application. All those pieces helped me get better at explaining how different parts of a system fit together.</p>
+      <p>In the program, I also deepened my understanding of data structures and algorithms. They were more like disjoint programming exercises in earlier days. But when I started using them for features inside a real application they made more sense. For the Weight Tracker, I added chronological sorting, ArrayList, ArrayDeque, binary search, summary calculations and sliding window moving average. The records had to be in proper sequence, chronologically, before any calculations of trends would mean anything. I also used a running sum for the moving average instead of adding the same values each time the window slid. Working through that feature helped me to better appreciate why the choice of an algorithm or data structure matters, beyond just making the program run.</p>
+      <p>I think probably the areas that have the most connection to the kind of work I want to do are software engineering and databases. During the program, I have worked with Java, Android, JavaScript, Node.js, Express, Angular, MongoDB, Mongoose, SQLite, and REST APIs. Travlr Getaways gave me experience with different parts of a full stack application and the Weight Tracker gave me more experience with Android and local data storage. In the capstone I refactored the Weight Tracker to move some of the program logic out of the Activity classes. I added services, a repository layer, reusable validation, session management and tests. By then I had added migration logic to the SQLite database with foreign keys, constraints, transactions, indexes, and updates and deletes for specific users. Having those changes go through taught me that the easy-to-maintain software usually results from a bunch of small choices you make during the course of a project.</p>
+      <p>Another thing I pay more attention to now than I did earlier in the program is security. The original Weight Tracker stored passwords in plain text, and that was something I wanted to fix when I came back to the project. The upgraded version still allows an older password to be upgraded after the user successfully logs in, but uses PBKDF2 with a random salt. I added input validation one time instead of having to do it over and over throughout the app, and I used parameterized database operations, ownership checks, and database constraints. Networking and client/server assignments gave me more practice thinking about what happens to information as it moves between different parts of a system. I don't plan to go into cybersecurity as my main career, but I expect that I will use secure coding in software engineering.</p>
+      <p>I chose to use the CS 360 Weight Tracker as my main artifact for this portfolio because it gave me a way to show several types of improvement in the same project. The first improvement was the structure and security of application. The second added algorithms to analyze saved weight history. The third was database focused and changed the way information is stored, queried and migrated. The final version with the original project makes it easier to see what really changed. The code review shows what I intended to improve . The narratives show what I changed and what I learned from each part of the process . It gives a better picture of the kind of developer I want to become when I see the project from start to finish. I want to be able to build something that works, understand why it works, explain the decisions I made, and revisit later to improve code that could be better.</p>
+
+    </div>
+  </section>
+
+  <section id="artifact" class="section">
+    <div class="wrap">
+      <h2>Artifact</h2>
+      <p>The artifact is the Weight Tracker Android application originally developed in CS 360: Mobile Architecture and Programming. The screenshots below show the original application.</p>
+      <div class="gallery">
+        <figure>
+          <img src="assets/images/LoginScreen.png" alt="Weight Tracker login screen">
+          <figcaption>Login screen</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/Weight%20Screen.png" alt="Weight Tracker main screen">
+          <figcaption>Main weight screen</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/SMS%20permission.png" alt="Weight Tracker SMS permission screen">
+          <figcaption>SMS permission screen</figcaption>
+        </figure>
+      </div>
+      <div class="downloads">
+        <a class="button secondary" href="downloads/Original_Weight_Tracker.zip">Original Artifact</a>
+        <a class="button secondary" href="downloads/Enhanced_Weight_Tracker_Final.zip">Enhanced Artifact</a>
+        <a class="button secondary" href="downloads/CS499_Final_Technical_Artifact_Samuel_Ilyayev.zip">Original and Enhanced Together</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="enhancements" class="section alt">
+    <div class="wrap">
+      <h2>Enhancement Narratives</h2>
+
+      <article class="card">
+        <h3>Enhancement One: Software Design and Engineering</h3>
+        <h4>Artifact Description</h4>
+        <p>The artifact is the Weight Tracker Android application that I originally created in CS 360: Mobile Architecture and Programming during the summer of 2026. It was built in Android Studio using Java and SQLite. The original version let users create an account, log in, add daily weight entries, set a goal weight, edit or delete entries, and optionally receive an SMS notification after reaching the goal.</p>
+        <h4>Why I Included It</h4>
+        <p>I used this artifact for the software design and engineering category because it had enough working functionality to be worth improving, but the code was still tightly coupled in the Activity classes. That made it a good example for showing how a working project can be reorganized into a cleaner and more maintainable design.</p>
+        <h4>How It Was Improved</h4>
+        <p>For this enhancement, I moved key logic out of the Activities and into clearer layers. I added a WeightRepository interface with a SQLiteWeightRepository implementation, service classes for authentication and weight-management logic, a SessionManager for SharedPreferences, centralized input validation, and a GoalNotificationService. I also replaced plain-text password storage for new accounts with PBKDF2 hashing and added tests for validation, authentication, and password security.</p>
+        <h4>What I Learned</h4>
+        <p>The main thing I learned from this enhancement was that better design does not always mean adding a visible feature. A lot of the value came from separating responsibilities, reducing duplicated logic, and making the code easier to test and change later.</p>
+      </article>
+
+      <article class="card">
+        <h3>Enhancement Two: Algorithms and Data Structures</h3>
+        <h4>Artifact Description</h4>
+        <p>For the algorithms and data structures enhancement, I kept the same Weight Tracker application and expanded what it could do with the saved weight history. The original app mostly stored and displayed entries, but it did not do much analysis with them.</p>
+        <h4>Why I Included It</h4>
+        <p>I selected this artifact again because it already had a growing set of historical records. That made it a practical place to show how collections, sorting, searching, and numerical processing can add value to an application.</p>
+        <h4>How It Was Improved</h4>
+        <p>I added a WeightRecord model, a WeightAnalyzer class, and a WeightAnalysis result object. The enhanced app now sorts entries by actual date, filters them by date range, calculates summary statistics, measures goal progress, and determines whether the trend is increasing, decreasing, or stable. I also implemented a seven-entry sliding-window moving average using an ArrayDeque and a running sum, and I added tests for sorting, filtering, moving averages, and goal progress.</p>
+        <h4>What I Learned</h4>
+        <p>This enhancement made the connection between algorithms and real software much clearer to me. The most important part was not just writing the calculations, but choosing structures and steps that made the results both correct and efficient.</p>
+      </article>
+
+      <article class="card">
+        <h3>Enhancement Three: Databases</h3>
+        <h4>Artifact Description</h4>
+        <p>The database enhancement continued from the improved Weight Tracker project and focused on strengthening the SQLite persistence layer. By this point, the application already had a cleaner architecture and historical analysis features, so the next step was improving how the data itself was stored and managed.</p>
+        <h4>Why I Included It</h4>
+        <p>I selected this artifact for the database category because user accounts, weight history, and goal values are central to how the application works. The project gave me a good way to show schema design, data integrity, migration, query design, and safer data access.</p>
+        <h4>How It Was Improved</h4>
+        <p>I upgraded the SQLite schema from version 1 to version 2 with a non-destructive migration, enabled foreign-key enforcement, added ON DELETE CASCADE relationships, moved dates to an ISO storage format, created an index for the main history query, added constraints for valid weight values, and tightened update and delete operations so they are scoped to the signed-in user. I also added transactional saving for a weight entry and an optional goal update, plus database-focused tests.</p>
+        <h4>What I Learned</h4>
+        <p>The biggest lesson here was that changing a database is different from changing a normal class. Data has to survive the update, so migration and integrity matter just as much as the new schema itself.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="outcomes" class="section">
+    <div class="wrap">
+      <h2>Course Outcomes</h2>
+      <div class="outcomes">
+        <div class="card small"><h3>Outcome 1</h3><p>I improved how I communicate technical work to other people through revision, instructor feedback, clearer project structure, and the overall organization of this portfolio.</p></div>
+        <div class="card small"><h3>Outcome 2</h3><p>The code review, narratives, and self-assessment demonstrate written and visual communication aimed at different audiences.</p></div>
+        <div class="card small"><h3>Outcome 3</h3><p>The algorithms enhancement demonstrates sorting, binary search, summary calculations, and a sliding-window moving average with attention to trade-offs.</p></div>
+        <div class="card small"><h3>Outcome 4</h3><p>The complete artifact shows practical work in Android, Java, SQLite, layered application design, testing, and iterative improvement.</p></div>
+        <div class="card small"><h3>Outcome 5</h3><p>The project includes PBKDF2 password hashing, validation, parameterized operations, ownership checks, database constraints, and a stronger security mindset.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Samuel Ilyayev | CS 499 Computer Science Capstone</p>
+  </div>
+</footer>
+</body>
+</html>

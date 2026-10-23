@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F6F8FA">
+
+    <TextView
+        android:id="@+id/textSmsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goal Notifications"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937"
+        android:layout_marginBottom="16dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textSmsDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This app can send an SMS notification when you reach your goal weight. You can still use the app if you choose not to allow SMS notifications."
+        android:textSize="16sp"
+        android:textColor="#4B5563"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone number for SMS alerts"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="18dp"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <Button
+        android:id="@+id/buttonRequestSmsPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable SMS Notifications"
+        android:minHeight="48dp"
+        android:layout_marginBottom="12dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/buttonSkipSmsPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skip for Now"
+        android:minHeight="48dp"
+        android:layout_marginBottom="24dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textSmsStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Permission status will display here."
+        android:textSize="14sp"
+        android:textColor="#6B7280"
+        android:gravity="center"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
